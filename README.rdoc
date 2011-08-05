@@ -1,9 +1,9 @@
 = artisan
 
-Description goes here.
+Communicate with artisan.8thlight.com's API. API keys are automatically issued per project on Artisan.
 
 == Contributing to artisan
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project
@@ -14,6 +14,6 @@ Description goes here.
 
 == Copyright
 
-Copyright (c) 2011 patrickgombert. See LICENSE.txt for
+Copyright (c) 2011 Patrick Gombert. See LICENSE.txt for
 further details.
 

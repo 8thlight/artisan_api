@@ -17,10 +17,12 @@ Jeweler::Tasks.new do |gem|
   gem.name = "artisan"
   gem.homepage = "http://github.com/patrickgombert/artisan"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Artisan API wrapper}
+  gem.description = %Q{Make calls to the Artisan API.}
   gem.email = "patrickgombert@gmail.com"
   gem.authors = ["patrickgombert"]
+  gem.add_dependency "httparty", "~> 0.7.8"
+  gem.add_development_dependency "thoughtbot-shoulda", ">=0"
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
