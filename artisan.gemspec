@@ -32,6 +32,7 @@ Gem::Specification.new do |s|
     "lib/artisan/story.rb",
     "spec/artisan/project_spec.rb",
     "spec/artisan/story_spec.rb",
+    "spec/artisan/validation_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/8thlight/artisan_gem}
