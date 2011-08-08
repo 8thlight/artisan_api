@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.authors = [%q{patrickgombert}]
   s.date = %q{2011-08-05}
   s.description = %q{Make calls to the Artisan API.}
-  s.email = %q{patrickgombert@gmail.com}
+  s.email = %q{patrick@8thlight.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "spec/artisan/story_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/patrickgombert/artisan}
+  s.homepage = %q{http://github.com/8thlight/artisan_gem}
   s.licenses = [%q{MIT}]
   s.require_paths = [%q{lib}]
   s.rubygems_version = %q{1.8.6}
