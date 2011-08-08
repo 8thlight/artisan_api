@@ -9,7 +9,7 @@ module Artisan
     end
 
     def self.update_estimates(key, story)
-      return HTTParty.put 'http://artisan.8thlight.com/api/projects/stories/' + story.number + '/estimates', :key => key, :accept => :json, :optimistic => story.optimistic, :realistic => story.realistic, :pessimistic => story.pessimistic
+      HTTParty.put 'http://artisan.8thlight.com/api/projects/stories/' + story.number + '/estimates', :key => key, :accept => :json, :optimistic => story.optimistic, :realistic => story.realistic, :pessimistic => story.pessimistic
       Query.raise_not_okay_exception response.code
       return response
     end
