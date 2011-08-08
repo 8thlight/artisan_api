@@ -33,19 +33,7 @@ RSpec::Core::RakeTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'cucumber/rake/task'
-Cucumber::Rake::Task.new(:test) do |task|
-  task.cucumber_opts = "--format progress"
-end
-
 task :default => :test
-
-require 'rcov/rcovtask'
-Rcov::RcovTask.new(:rcov) do |cov|
-  cov.pattern = 'lib/**/*.rb'
-  cov.verbose = true
-  cov.rcov_opts << '--exclude "gems/*"'
-end
 
 require 'rake/rdoctask'
 Rake::RDocTask.new(:rdoc) do |rdoc|

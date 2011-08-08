@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{patrickgombert}]
-  s.date = %q{2011-08-05}
+  s.date = %q{2011-08-08}
   s.description = %q{Make calls to the Artisan API.}
   s.email = %q{patrick@8thlight.com}
   s.extra_rdoc_files = [
@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "artisan.gemspec",
     "lib/artisan.rb",
     "lib/artisan/project.rb",
     "lib/artisan/query.rb",
@@ -48,6 +49,8 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.6.0"])
+      s.add_development_dependency(%q<cucumber>, ["~> 1.0.2"])
       s.add_runtime_dependency(%q<httparty>, ["~> 0.7.8"])
       s.add_development_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     else
@@ -56,6 +59,8 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<rspec>, ["~> 2.6.0"])
+      s.add_dependency(%q<cucumber>, ["~> 1.0.2"])
       s.add_dependency(%q<httparty>, ["~> 0.7.8"])
       s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
     end
@@ -65,6 +70,8 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<rspec>, ["~> 2.6.0"])
+    s.add_dependency(%q<cucumber>, ["~> 1.0.2"])
     s.add_dependency(%q<httparty>, ["~> 0.7.8"])
     s.add_dependency(%q<thoughtbot-shoulda>, [">= 0"])
   end
