@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{artisan}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{patrickgombert}]
-  s.date = %q{2011-08-08}
+  s.authors = ["patrickgombert"]
+  s.date = %q{2011-08-09}
   s.description = %q{Make calls to the Artisan API.}
   s.email = %q{patrick@8thlight.com}
   s.extra_rdoc_files = [
@@ -36,9 +36,9 @@ Gem::Specification.new do |s|
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/8thlight/artisan_gem}
-  s.licenses = [%q{MIT}]
-  s.require_paths = [%q{lib}]
-  s.rubygems_version = %q{1.8.6}
+  s.licenses = ["MIT"]
+  s.require_paths = ["lib"]
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{Artisan API wrapper}
 
   if s.respond_to? :specification_version then
