@@ -1,12 +1,12 @@
 module Artisan
   class Project
 
-    attr_reader :stories
+    attr_reader :stories, :name, :description
 
     def initialize json_chunk
-      story_json_chunks = json_chunk.collect{|story| story["story"]}
       @stories = []
-      generate_stories story_json_chunks
+      @name = json_chunk["project"]["name"]
+      @description = json_chunk["project"]["description"]
     end
 
     def generate_stories story_chunks

@@ -8,10 +8,16 @@ module Artisan
       return response.body
     end
 
+    def self.get_stories(key, address = 'artisan.8thlight.com')
+      response = HTTParty.get 'http://' + address + '/api/projects/stories', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      Validation.validate_response response.code
+      return response.body
+    end
+
     def self.update_estimates(key, story, address = 'artisan.8thlight.com')
       response = HTTParty.put 'http://' + address + '/api/projects/stories/' + story.number.to_s + '/estimates', :query => {:key => key}, :headers => {'accept' => 'application/json', 'content-type' => 'application/json'}, :body => '{"Optimistic" => story.optimistic, "Realistic" => story.realistic, "Pessimistic" => story.pessimistic}'.to_json
       Validation.validate_response response.code
-      return response
+      return response.body
     end
 
     module Validation
