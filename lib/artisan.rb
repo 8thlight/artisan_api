@@ -12,7 +12,13 @@ module Artisan
   def self.get_stories(key, address = 'artisan.8thlight.com')
     response = Query.get_stories(key, address)
     json_chunk = JSON::parse(response)
-    return json_chunk
+
+    stories = []
+    json_chunk.each do |story_chunk|
+      stories << Story.new(story_chunk)
+    end
+
+    return stories
   end
 
   def self.update_estimates(key, story, address = 'artisan.8thlight.com')

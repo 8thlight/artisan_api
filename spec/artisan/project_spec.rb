@@ -10,11 +10,4 @@ describe 'Project' do
     @project.description.should == "This is a project."
   end
 
-  it "contains stories" do
-    @project = Artisan::Project.new({'project' => {'name' => 'name', 'description' => 'description'}})
-    chunk = '[{"story":{"name":"T1","number":1,"optimistic":null,"pessimistic":null,"realistic":null}},{"story":{"name":"T2","number":2,"optimistic":null,"pessimistic":null,"realistic":null}},{"story":{"name":"T3","number":3,"optimistic":null,"pessimistic":null,"realistic":null}}]'
-
-    @project.generate_stories JSON.parse(chunk)
-    @project.stories.size.should == 3
-  end
 end

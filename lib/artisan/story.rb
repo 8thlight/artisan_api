@@ -3,12 +3,12 @@ module Artisan
 
     attr_accessor :name, :number, :optimistic, :realistic, :pessimistic
 
-    def initialize json_chunk
-      @name = json_chunk["name"]
-      @number = json_chunk["number"]
-      @optimistic = json_chunk["optimistic"]
-      @realistic = json_chunk["realistic"]
-      @pessimistic = json_chunk["pessimistic"]
+    def initialize story_chunk
+      @name = story_chunk["name"]
+      @number = story_chunk["number"]
+      @optimistic = story_chunk["optimistic"]
+      @realistic = story_chunk["realistic"]
+      @pessimistic = story_chunk["pessimistic"]
     end
 
   end
