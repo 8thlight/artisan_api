@@ -15,7 +15,7 @@ module Artisan
     end
 
     def self.update_estimates(key, story, address = 'artisan.8thlight.com')
-      response = HTTParty.put 'http://' + address + '/api/projects/stories/' + story.number.to_s + '/estimates', :query => {:key => key}, :headers => {'accept' => 'application/json', 'content-type' => 'application/json'}, :body => {"Optimistic" => story.optimistic, "Realistic" => story.realistic, "Pessimistic" => story.pessimistic}.to_json
+      response = HTTParty.put 'http://' + address + '/api/projects/stories/' + story.number.to_s + '/estimates', :query => {:key => key}, :headers => {'accept' => 'application/json', 'content-type' => 'application/json'}, :body => {"optimistic" => story.optimistic, "realistic" => story.realistic, "pessimistic" => story.pessimistic}.to_json
       Validation.validate_response response.code
       return response.body
     end
