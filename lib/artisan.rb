@@ -1,4 +1,5 @@
 require 'artisan/project'
+require 'artisan/iteration'
 require 'artisan/story'
 require 'artisan/query'
 require 'json'
