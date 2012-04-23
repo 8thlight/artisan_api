@@ -16,10 +16,7 @@ module Artisan
     json_chunk = JSON::parse(response)
 
     @iterations = []
-    json_chunk.collect { |iteration_chunk|
-      puts iteration_chunk
-      @iterations << Iteration.new(iteration_chunk)
-    }
+    json_chunk.collect { |iteration_chunk| @iterations << Iteration.new(iteration_chunk) }
 
     return @iterations
   end
