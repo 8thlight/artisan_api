@@ -8,6 +8,12 @@ module Artisan
       return response.body
     end
 
+    def self.get_iterations(key, address)
+      response = HTTParty.get 'http://' + address + '/api/projects/iterations', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      Validation.validate_response response.code
+      return response.body
+    end
+
     def self.get_stories(key, address)
       response = HTTParty.get 'http://' + address + '/api/projects/stories', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
