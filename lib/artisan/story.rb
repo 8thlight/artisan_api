@@ -4,11 +4,11 @@ module Artisan
     attr_accessor :name, :number, :optimistic, :realistic, :pessimistic
 
     def initialize story_chunk
-      @name = story_chunk["story"]["name"]
-      @number = story_chunk["story"]["number"]
-      @optimistic = story_chunk["story"]["optimistic"]
-      @realistic = story_chunk["story"]["realistic"]
-      @pessimistic = story_chunk["story"]["pessimistic"]
+      @name = story_chunk['name']
+      @number = story_chunk['number']
+      @optimistic = story_chunk['optimistic']
+      @realistic = story_chunk['realistic']
+      @pessimistic = story_chunk['pessimistic']
     end
 
   end

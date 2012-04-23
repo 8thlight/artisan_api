@@ -28,9 +28,11 @@ Gem::Specification.new do |s|
     "artisan.gemspec",
     "lib/artisan.rb",
     "lib/artisan/project.rb",
+    "lib/artisan/iteration.rb",
     "lib/artisan/query.rb",
     "lib/artisan/story.rb",
     "spec/artisan/project_spec.rb",
+    "spec/artisan/iteration_spec.rb",
     "spec/artisan/story_spec.rb",
     "spec/artisan/validation_spec.rb",
     "spec/spec_helper.rb"
