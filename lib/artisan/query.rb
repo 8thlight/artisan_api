@@ -20,6 +20,21 @@ module Artisan
       return response.body
     end
 
+    def self.get_stories_by_iteration(key, iteration_number, address)
+      response = HTTParty.get(
+        'http://' + address + '/api/projects/iterations/stories',
+        :headers => {
+          'accept' => 'application/json'
+        },
+        :query => {
+          'key' => key,
+          'iteration_number' => iteration_number
+        }
+      )
+      Validation.validate_response response.code
+      return response.body
+    end
+
     def self.get_backlog_stories(key, address)
       response = HTTParty.get 'http://' + address + '/api/projects/stories/backlog', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
@@ -28,12 +43,6 @@ module Artisan
 
     def self.update_estimates(key, story, address)
       response = HTTParty.put 'http://' + address + '/api/projects/stories/' + story.number.to_s + '/estimates', :query => {:key => key}, :headers => {'accept' => 'application/json', 'content-type' => 'application/json'}, :body => {"optimistic" => story.optimistic, "realistic" => story.realistic, "pessimistic" => story.pessimistic}.to_json
-      Validation.validate_response response.code
-      return response.body
-    end
-
-    def self.get_stories_by_iteration(key, iteration_number, address)
-      response = HTTParty.get 'http://' + address + '/api/projects/iterations/stories/', :query => { :key => key, :iteration_number => iteration_number }
       Validation.validate_response response.code
       return response.body
     end

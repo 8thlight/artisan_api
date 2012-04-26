@@ -31,6 +31,17 @@ module Artisan
     return @stories
   end
 
+  def self.get_stories_by_iteration(key, iteration_number, address = 'artisan.8thlight.com')
+    response = Query.get_stories_by_iteration(key, iteration_number, address)
+    p response.inspect
+    json_chunk = JSON::parse(response)
+
+    @stories = []
+    json_chunk.collect { |story_chunk| @stories << Story.new(story_chunk) }
+
+    return @stories
+  end
+
   def self.get_backlog_stories(key, address = 'artisan.8thlight.com')
     response = Query.get_backlog_stories(key, address)
     json_chunk = JSON::parse(response)
@@ -43,9 +54,5 @@ module Artisan
 
   def self.update_estimates(key, story, address = 'artisan.8thlight.com')
     response = Query.update_estimates(key, story, address)
-  end
-
-  def self.get_stories_by_iteration(key, iteration_number, address = 'artisan.8thlight.com')
-    response = Query.get_stories_by_iteration(key, iteration_number)
   end
 end
