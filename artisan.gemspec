@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{patrickgombert}]
+  s.authors = [%q{patrickgombert cymen}]
   s.date = %q{2011-10-06}
   s.description = %q{Make calls to the Artisan API.}
   s.email = %q{patrick@8thlight.com}
@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
     "spec/artisan/validation_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/8thlight/artisan_gem}
+  s.homepage = %q{https://github.com/8thlight/artisan_api}
   s.licenses = [%q{MIT}]
   s.require_paths = [%q{lib}]
   s.rubygems_version = %q{1.8.6}
