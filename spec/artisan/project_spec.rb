@@ -1,11 +1,14 @@
 require 'spec_helper'
-require 'json'
 
 describe 'Project' do
-  it "intializes with an api call json chunk" do
-    chunk = {'description' => 'This is a project.', 'name' => 'A'}
 
-    @project = Artisan::Project.new(chunk)
+  it "intializes with a hash" do
+    hash = {
+      'description' => 'This is a project.',
+      'name'        => 'A'
+    }
+
+    @project = Artisan::Project.new(hash)
     @project.name.should == "A"
     @project.description.should == "This is a project."
   end

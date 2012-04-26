@@ -1,12 +1,9 @@
+require 'artisan/base'
+
 module Artisan
-  class Project
+  class Project < Base
 
-    attr_reader :name, :description
-
-    def initialize json_chunk
-      @name = json_chunk['name']
-      @description = json_chunk['description']
-    end
+    hash_attr_accessor :name, :description
 
   end
 end

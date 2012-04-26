@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{artisan}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{patrickgombert}]
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "artisan.gemspec",
     "lib/artisan.rb",
+    "lib/artisan/base.rb",
     "lib/artisan/project.rb",
     "lib/artisan/iteration.rb",
     "lib/artisan/query.rb",
