@@ -26,4 +26,11 @@ describe 'Base' do
     attributes = @peep.attributes
     attributes[:name].should eq("Nancy")
   end
+
+  it "attributes hash is a copy (can't set values)" do
+    attributes = @peep.attributes
+    attributes[:name].should eq("Nancy")
+    @peep.attributes[:name] = "Bob"
+    attributes[:name].should eq("Nancy")
+  end
 end

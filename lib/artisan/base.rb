@@ -21,7 +21,7 @@ module Artisan
     end
 
     def attributes
-      return @attributes
+      return @attributes.dup
     end
 
   end
