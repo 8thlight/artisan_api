@@ -33,7 +33,6 @@ module Artisan
 
   def self.get_stories_by_iteration(key, iteration_number, address = 'artisan.8thlight.com')
     response = Query.get_stories_by_iteration(key, iteration_number, address)
-    p response.inspect
     json_chunk = JSON::parse(response)
 
     @stories = []
