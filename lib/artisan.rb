@@ -44,4 +44,8 @@ module Artisan
   def self.update_estimates(key, story, address = 'artisan.8thlight.com')
     response = Query.update_estimates(key, story, address)
   end
+
+  def self.get_stories_by_iteration(key, iteration_number, address = 'artisan.8thlight.com')
+    response = Query.get_stories_by_iteration(key, iteration_number)
+  end
 end

@@ -32,6 +32,12 @@ module Artisan
       return response.body
     end
 
+    def self.get_stories_by_iteration(key, iteration_number, address)
+      response = HTTParty.get 'http://' + address + '/api/projects/iterations/stories/', :query => { :key => key, :iteration_number => iteration_number }
+      Validation.validate_response response.code
+      return response.body
+    end
+
     module Validation
       def self.validate_response code
         if code == 401
