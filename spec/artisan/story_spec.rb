@@ -3,9 +3,10 @@ require 'spec_helper'
 describe Artisan::Story do
 
   it "initializes with an api call json chunk" do
-    chunk = {'story' => {'name' => "Test", 'number' => 1, 'optimistic' => nil, 'realistic' => nil, 'pessimistic' => nil} }
+    chunk = {'story' => {'name' => "Test", 'number' => 1, 'optimistic' => nil, 'realistic' => nil, 'pessimistic' => nil, 'estimate' => nil} }
     story = Artisan::Story.new(chunk)
     story.name.should == "Test"
     story.optimistic.should be_nil
+    story.estimate.should be_nil
   end
 end
