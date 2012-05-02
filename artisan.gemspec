@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = %q{artisan}
-  s.version = "0.3.6"
+  s.version = "0.3.7"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = [%q{patrickgombert cymen}]
+  s.authors = [%q{patrickgombert cymen benthebossvoss}]
   s.date = %q{2011-10-06}
   s.description = %q{Make calls to the Artisan API.}
   s.email = %q{patrick@8thlight.com}
