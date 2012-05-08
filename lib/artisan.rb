@@ -21,6 +21,10 @@ module Artisan
     return @iterations
   end
 
+  def self.get_signoff_pdf(key, iteration_id, address = 'artisan.8thlight.com')
+    response = Query.get_signoff_pdf(key, iteration_id, address)
+  end
+
   def self.get_stories(key, address = 'artisan.8thlight.com')
     response = Query.get_stories(key, address)
     json_chunk = JSON::parse(response)

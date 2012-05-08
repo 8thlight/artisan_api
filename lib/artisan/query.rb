@@ -14,10 +14,7 @@ module Artisan
       return response.body
     end
 
-    def self.get_stories(key, address)
-      response = HTTParty.get 'http://' + address + '/api/projects/stories', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
-      Validation.validate_response response.code
-      return response.body
+    def self.get_signoff_pdf(key, iteration_id, address)
     end
 
     def self.get_stories_by_iteration(key, iteration_number, address)
@@ -35,6 +32,12 @@ module Artisan
       return response.body
     end
 
+    def self.get_stories(key, address)
+      response = HTTParty.get 'http://' + address + '/api/projects/stories', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      Validation.validate_response response.code
+      return response.body
+    end
+
     def self.get_backlog_stories(key, address)
       response = HTTParty.get 'http://' + address + '/api/projects/stories/backlog', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
@@ -46,6 +49,7 @@ module Artisan
       Validation.validate_response response.code
       return response.body
     end
+
 
     module Validation
       def self.validate_response code
