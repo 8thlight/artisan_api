@@ -15,6 +15,27 @@ module Artisan
     end
 
     def self.get_signoff_pdf(key, iteration_id, address)
+      response = HTTParty.get(
+        'http://' + address + '/api/reports',
+        :headers => {
+          'accept' => 'application/pdf'
+        },
+        :query => {
+          'key' => key,
+          'options'  => {
+            'iteration_id' => iteration_id,
+            'show_owner' => '1',
+            'sections'   => {
+              'Completed' => '1',
+              'Features'  => '1',
+              'Tasks'     => '1',
+              'Untagged'  => '0'
+            }
+          }
+        }
+      )
+      Validation.validate_response response.code
+      return response.body
     end
 
     def self.get_stories_by_iteration(key, iteration_number, address)

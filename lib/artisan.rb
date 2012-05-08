@@ -23,6 +23,8 @@ module Artisan
 
   def self.get_signoff_pdf(key, iteration_id, address = 'artisan.8thlight.com')
     response = Query.get_signoff_pdf(key, iteration_id, address)
+
+    return SignoffPdf.new :raw_pdf => response
   end
 
   def self.get_stories(key, address = 'artisan.8thlight.com')
