@@ -2,6 +2,7 @@ require 'artisan/project'
 require 'artisan/iteration'
 require 'artisan/story'
 require 'artisan/query'
+require 'artisan/signoff_pdf'
 require 'json'
 
 module Artisan

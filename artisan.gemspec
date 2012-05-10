@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{artisan}
-  s.version = "0.3.7"
+  s.version = "0.3.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{patrickgombert cymen benthebossvoss}]
@@ -32,10 +32,12 @@ Gem::Specification.new do |s|
     "lib/artisan/iteration.rb",
     "lib/artisan/query.rb",
     "lib/artisan/story.rb",
+    "lib/artisan/signoff_pdf.rb",
     "spec/artisan/project_spec.rb",
     "spec/artisan/iteration_spec.rb",
     "spec/artisan/story_spec.rb",
     "spec/artisan/validation_spec.rb",
+    "spec/artisan/signoff_pdf_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{https://github.com/8thlight/artisan_api}
