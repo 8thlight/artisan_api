@@ -21,8 +21,6 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Make calls to the Artisan API.}
   gem.email = "patrick@8thlight.com"
   gem.authors = ["patrickgombert"]
-  gem.add_dependency "httparty", "~> 0.7.8"
-  gem.add_development_dependency "thoughtbot-shoulda", ">=0"
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
