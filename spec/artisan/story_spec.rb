@@ -7,13 +7,15 @@ describe Artisan::Story do
       'name'          => 'Test',
       'number'        => 1,
       'weighted_mean' => nil,
-      'acceptance_criteria' => 'Complete this story'
+      'acceptance_criteria' => 'Complete this story',
+      'nonbillable' => false
     }
     story = Artisan::Story.new(hash)
     story.name.should == "Test"
     story.optimistic.should be_nil
     story.weighted_mean.should be_nil
     story.acceptance_criteria.should == "Complete this story"
+    story.nonbillable.should be_false
   end
 
 end

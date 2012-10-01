@@ -5,6 +5,7 @@ module Artisan
 
     hash_attr_accessor :name, :number, :optimistic, :realistic, :pessimistic,
       :weighted_mean, :assigned_user_id, :assigned_user_name,
-      :assigned_user_email, :estimate, :acceptance_criteria
+      :assigned_user_email, :estimate, :acceptance_criteria, :nonbillable
+
   end
 end
