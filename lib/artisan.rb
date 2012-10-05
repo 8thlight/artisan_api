@@ -61,4 +61,9 @@ module Artisan
   def self.update_estimates(key, story, address = 'artisan.8thlight.com')
     response = Query.update_estimates(key, story, address)
   end
+
+  def self.authenticate(username, password, address = 'artisan.8thlight.com')
+    response = Query.authenticate(username, password, address)
+    JSON:parse(response)["success"]
+  end
 end
