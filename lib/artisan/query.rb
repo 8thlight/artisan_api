@@ -71,6 +71,11 @@ module Artisan
       return response.body
     end
 
+    def self.authenticate(username, password, address)
+      response = HTTParty.get 'http://' + address + '/api/auth/authenticate', :headers => {'accept' => 'application/json'}, :query => {'username' => username, 'password' => password}
+      Validation.validate_response response.code
+      return response.body
+    end
 
     module Validation
       def self.validate_response code
