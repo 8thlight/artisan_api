@@ -64,6 +64,6 @@ module Artisan
 
   def self.authenticate(username, password, address = 'artisan.8thlight.com')
     response = Query.authenticate(username, password, address)
-    JSON:parse(response)["success"]
+    JSON::parse(response)["success"]
   end
 end
