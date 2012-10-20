@@ -14,6 +14,12 @@ module Artisan
       return response.body
     end
 
+    def self.get_iteration_total_billed_points_by_craftsman(key, iteration_number, address)
+      response = HTTParty.get "http://#{address}/api/projects/iterations/#{iteration_number}/total_billed_points_by_craftsman", :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      Validation.validate_response response.code
+      return response.body
+    end
+
     def self.get_signoff_pdf(key, iteration_id, address)
       response = HTTParty.get(
         'http://' + address + '/api/reports',
