@@ -3,13 +3,13 @@ require 'httparty'
 module Artisan
   module Query
     def self.get_project(key, address)
-      response = HTTParty.get 'http://' + address + '/api/projects', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      response = HTTParty.get "http://#{address}/api/projects", :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
       return response.body
     end
 
     def self.get_iterations(key, address)
-      response = HTTParty.get 'http://' + address + '/api/projects/iterations', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      response = HTTParty.get "http://#{address}/api/projects/iterations", :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
       return response.body
     end
@@ -46,7 +46,7 @@ module Artisan
 
     def self.get_stories_by_iteration(key, iteration_number, address)
       response = HTTParty.get(
-        'http://' + address + '/api/projects/iterations/stories',
+        "http://#{address}/api/projects/iterations/stories",
         :headers => {
           'accept' => 'application/json'
         },
@@ -60,25 +60,25 @@ module Artisan
     end
 
     def self.get_stories(key, address)
-      response = HTTParty.get 'http://' + address + '/api/projects/stories', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      response = HTTParty.get "http://#{address}/api/projects/stories", :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
       return response.body
     end
 
     def self.get_backlog_stories(key, address)
-      response = HTTParty.get 'http://' + address + '/api/projects/stories/backlog', :headers => {'accept' => 'application/json'}, :query => {'key' => key}
+      response = HTTParty.get "http://#{address}/api/projects/stories/backlog", :headers => {'accept' => 'application/json'}, :query => {'key' => key}
       Validation.validate_response response.code
       return response.body
     end
 
     def self.update_estimates(key, story, address)
-      response = HTTParty.put 'http://' + address + '/api/projects/stories/' + story.number.to_s + '/estimates', :query => {:key => key}, :headers => {'accept' => 'application/json', 'content-type' => 'application/json'}, :body => {"optimistic" => story.optimistic, "realistic" => story.realistic, "pessimistic" => story.pessimistic}.to_json
+      response = HTTParty.put "http://#{address}/api/projects/stories/#{story.number.to_s}/estimates", :query => {:key => key}, :headers => {'accept' => 'application/json', 'content-type' => 'application/json'}, :body => {"optimistic" => story.optimistic, "realistic" => story.realistic, "pessimistic" => story.pessimistic}.to_json
       Validation.validate_response response.code
       return response.body
     end
 
     def self.authenticate(username, password, address)
-      response = HTTParty.get 'http://' + address + '/api/auth/authenticate', :headers => {'accept' => 'application/json'}, :query => {'username' => username, 'password' => password}
+      response = HTTParty.get "http://#{address}/api/auth/authenticate", :headers => {'accept' => 'application/json'}, :query => {'username' => username, 'password' => password}
       Validation.validate_response response.code
       return response.body
     end
