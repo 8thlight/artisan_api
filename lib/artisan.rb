@@ -1,5 +1,6 @@
 require 'artisan/project'
 require 'artisan/iteration'
+require 'artisan/iteration_total_billed_points_by_craftsman'
 require 'artisan/story'
 require 'artisan/query'
 require 'artisan/signoff_pdf'
@@ -20,6 +21,12 @@ module Artisan
     json_chunk.collect { |iteration_chunk| @iterations << Iteration.new(iteration_chunk) }
 
     return @iterations
+  end
+
+  def self.get_iteration_total_billed_points_by_craftsman(key, iteration_number, address = 'artisan.8thlight.com')
+    response = Query.get_iteration_total_billed_points_by_craftsman(key, iteration_number, address)
+    json_chunk = JSON::parse(response)
+    return IterationTotalBilledPointsByCraftsman.new(json_chunk)
   end
 
   def self.get_signoff_pdf(key, iteration_id, address = 'artisan.8thlight.com')
