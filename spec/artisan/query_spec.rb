@@ -9,4 +9,5 @@ describe Artisan::Query do
     HTTParty.stub! :get => response
     Artisan::Query.get_signoff_pdf("api_key", 3, "address").should == pdf
   end
+
 end
