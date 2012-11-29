@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{artisan}
-  s.version = "0.5.2"
+  s.version = "0.5.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["patrickgombert"]
-  s.date = %q{2012-10-12}
+  s.date = %q{2012-11-29}
   s.description = %q{Make calls to the Artisan API.}
   s.email = %q{patrick@8thlight.com}
   s.extra_rdoc_files = [
@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
     "lib/artisan.rb",
     "lib/artisan/base.rb",
     "lib/artisan/iteration.rb",
+    "lib/artisan/iteration_total_billed_points_by_craftsman.rb",
     "lib/artisan/project.rb",
     "lib/artisan/query.rb",
     "lib/artisan/signoff_pdf.rb",
@@ -36,6 +37,7 @@ Gem::Specification.new do |s|
     "spec/artisan/artisan_spec.rb",
     "spec/artisan/base_spec.rb",
     "spec/artisan/iteration_spec.rb",
+    "spec/artisan/iteration_total_billed_points_by_craftsman_spec.rb",
     "spec/artisan/project_spec.rb",
     "spec/artisan/query_spec.rb",
     "spec/artisan/signoff_pdf_spec.rb",
