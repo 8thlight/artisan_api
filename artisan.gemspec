@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{artisan}
-  s.version = "0.5.3"
+  s.name = "artisan"
+  s.version = "0.5.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["patrickgombert"]
-  s.date = %q{2012-11-29}
-  s.description = %q{Make calls to the Artisan API.}
-  s.email = %q{patrick@8thlight.com}
+  s.date = "2013-09-30"
+  s.description = "Make calls to the Artisan API."
+  s.email = "patrick@8thlight.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -45,14 +45,13 @@ Gem::Specification.new do |s|
     "spec/artisan/validation_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/8thlight/artisan_gem}
+  s.homepage = "http://github.com/8thlight/artisan_gem"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Artisan API wrapper}
+  s.rubygems_version = "1.8.23"
+  s.summary = "Artisan API wrapper"
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
